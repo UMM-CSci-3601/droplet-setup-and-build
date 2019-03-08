@@ -37,11 +37,12 @@ entails.
    - Steps 3 and 4 will happen on the Digital Ocean VPS when you have one set up.
 
 ## Step 3: Creating a droplet
-- Click the big shiny "Create" button, and choose "Droplet" as the thing you want to create.
+
+- Click the big shiny "Create" button at the top-right of the screen, and choose "Droplet" as the thing you want to create.
 - Select the suggested Ubuntu version as your operating system.
 - Select the smallest droplet, it should be $5 / month.
-- Don't add block storage.
-- Stick with the default datacenter / region (probably New York).
+- Don't add backups or block storage.
+- Stick with the default datacenter / region (probably one of the U.S. options).
 - Don't select any additional options.
 - Add an SSH key. Use the contents of the public key file you generated in step 2.
    - DigitalOcean will use this info to automagically do steps 3 and 4 from the SSH keypair instructions so you never have to do them "by hand".
@@ -52,10 +53,15 @@ entails.
 ## Step 4: Setting up your droplet
 - SSH to your droplet by running ``ssh root@[my ip here]`` (using the IP of your droplet)
 - Logged in? Good, keep reading. Problems? Ask someone for help (or Google).
-- run: ``wget https://gist.githubusercontent.com/pluck011/f44c9d1557a5127e100a300d018d3b63/raw/f78291783666ca776681ff9e1fd9e99428d6c522/3601-setup.sh`` as root.
+- run: ``wget https://raw.githubusercontent.com/UMM-CSci-3601/droplet-setup-and-build/master/3601-setup.sh`` as root.
 - run ``chmod +x 3601-setup.sh``
 - run ``./3601-setup.sh``
+   - This will install a bunch of packages necessary for the droplet to be able to run your system, like a Java JDK.
 - Do whatever it asks.
+   - When it asks for for info for `deploy-user` like "Full Name", etc., feel free to leave those blank (just hit `Enter`).
+   - You'll get a weird screen asking a question about configuring `openssh-server`. Choose "keep the local version" on that screen.
+   - You'll have to say `y` a few times along the way.
+   - Actually doing the installs will take a few minutes.
 - Reboot the droplet by typing `reboot`. SSH into `deploy-user@[my ip here]`.
 
 ## Step 5: Running your project
