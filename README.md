@@ -1,5 +1,5 @@
 # UMM CSCI 3601 Droplet Setup Instructions
-#### Spring 2018
+#### Fall 2019
 
 ## Summary
 This document is, essentially, a short guide to setting up a "droplet" on [DigitalOcean](https://www.digitalocean.com)
@@ -70,7 +70,9 @@ entails.
 - Use ``cd client/src/envrionments/`` and type `nano environment.prod.ts`.
 - Edit the API_URL to reflect the IP address of your droplet with `:4567/api/` at the end of it. (i.e. `http://192.168.0.1:4567/api/`). Use `Ctrl + X` to exit and then save the file. NOTE: If you use HTTPS for your project, make sure to change `http` to `https` in the URL.
 - Navigate back to your repository. (Type `cd ~` and then `cd [your repo name]`).
+- Run ``chmod +x build.sh`` to make the build script executable.
 - Run `./build.sh` to build and deploy your project.
+- If you wish to seed your database, run the script to do that. ``./gradlew seedMongoDB``
 - run ``tmux`` to enter a Tmux session.
 - run ``./3601.sh`` to start your server (**3601.sh** is in the home directory `cd ~`).
 - press ``Ctrl + b`` and then ``d`` to *detach* from this Tmux session. It will continue running even after you log out. To reconnect to the Tmux session, log into your droplet and run ``tmux a`` (a for *attach*!)
