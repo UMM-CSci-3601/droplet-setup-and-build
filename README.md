@@ -69,7 +69,7 @@ entails.
 ## Step 5: Running your project
 - Use ``git clone [your repo url here]`` to get your repo on the droplet.
 - Use ``cd [your repo name]`` to move into the directory you just grabbed from github. (cd = Change Directory)
-- Use ``cd client/src/envrionments/`` and type `nano environment.prod.ts`.
+- Use ``cd client/src/environments/`` and type `nano environment.prod.ts`.
 - Edit the API_URL to reflect the IP address of your droplet with `:4567/api/` at the end of it. (i.e. `http://192.168.0.1:4567/api/`). Use `Ctrl + X` to exit and then save the file. NOTE: If you use HTTPS for your project, make sure to change `http` to `https` in the URL.
 - Navigate back to your repository. (Type `cd ~` and then `cd [your repo name]`).
 - Run ``chmod +x build.sh`` to make the build script executable.
