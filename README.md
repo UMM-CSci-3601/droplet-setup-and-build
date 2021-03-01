@@ -1,6 +1,8 @@
 # UMM CSCI 3601 Droplet Setup Instructions
 #### Fall 2019
 
+## **This has been replaced by https://github.com/UMM-CSci-3601/3601-iteration-template/blob/main/DEPLOYMENT.md**
+
 ## Summary
 This document is, essentially, a short guide to setting up a "droplet" on [DigitalOcean](https://www.digitalocean.com)
 to be used as a tool for deploying simple web applications. This is by no means a
